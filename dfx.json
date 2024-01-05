@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "Abank_backend": {
+      "main": "src/Abank_backend/main.mo",
+      "type": "motoko"
+    },
+    "Abank_frontend": {
+      "dependencies": [
+        "Abank_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/Abank_frontend/src/index.html"
+      },
+      "source": [
+        "src/Abank_frontend/assets",
+        "dist/Abank_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
